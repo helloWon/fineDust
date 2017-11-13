@@ -1,0 +1,191 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', sans-serif;
+}
+
+
+#header {
+    width: 100vw;
+    top: 0;
+    background-color: #15355a;
+    color: white;
+	height:60px;
+}
+
+#header #search-button {
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+#header #search-input {
+    float: left;
+    width: 300px;
+    margin-top: 13px;
+    border: none;
+    border-radius: 2px;
+    padding: 3px;
+}
+
+#header #logo {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 15px;
+	vertical-align:middle;
+}
+
+#header #right{
+    width: 210px;
+    height: 50px;
+    float: right;
+    margin-right:25px;
+}
+
+
+button {
+    background-color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 12px;
+    color: #333;
+}
+
+#map-wrap {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+#map-side {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    width: 300px;
+    background-color: #eee;
+    box-shadow: 0px 0px 20px 0px #999;
+    z-index: 9999;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+
+#map-side > h1{
+    font-size: 13px;
+    margin: 0 0 30px 0;
+}
+
+#map-side > h2 {
+    font-size: 14px;
+}
+
+#map-side > #profile0 {
+    width: 100px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    background-color: #40a6d5;
+    border-radius: 50px;
+    margin-bottom: 40px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding-top: 40px;
+}
+
+#map-side > #profile1 {
+    width: 100px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    background-color: #0eb892;
+    border-radius: 50px;
+    margin-bottom: 40px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding-top: 40px;
+}
+
+#map-side > #profile2 {
+    width: 100px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    background-color: #1a911d;
+    border-radius: 50px;
+    margin-bottom: 40px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding-top: 40px;
+}
+
+#map-side > #profile-1 {
+    width: 100px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    background-color: #ce8631;
+    border-radius: 50px;
+    margin-bottom: 40px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding-top: 40px;
+}
+
+#map-side > #profile-2 {
+    width: 100px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    background-color: #de3939;
+    border-radius: 50px;
+    margin-bottom: 40px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding-top: 40px;
+}
+
+#map-side > #table {
+	margin-bottom:30px;
+}
+
+
+.state{
+	width: 100%;
+	font-size:12px;
+    margin: 0 auto;
+}
+.state th {padding:5px; font-weight:bold; border:1px solid #aaaaaa;background-color:#c7c7c7;}
+.state .td_01 {padding:5px; text-align:center; font-weight:bold; border:1px solid #aaaaaa;background-color:#d3d3d3;}
+.td_02 {padding:5px; border:1px solid #aaaaaa;background-color:#fff; text-align:left;}
+
+#map-side > #weather {
+    margin: 0 auto;
+	text-align:center;
+}
+
+
+#map-side > .pm-status {
+    font-size: 12px;
+    margin: 0;
+}
+
+#map-side > .msg {
+    margin-top: 20px;
+    font-size: 10px;
+    color: #999;
+}
+
