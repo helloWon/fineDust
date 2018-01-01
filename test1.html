@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+                        $.ajax({
+                                url: 'algo_return.php?x='+"196116.1612586281"+'&y='+"443815.5800470752",
+                                type: 'GET',
+                                cache: false,
+                                success: function(data) {
+                                        main_pm10value = data.x;
+                                        main_pm25value = data.y;
+                                },
+                                error:function(request,status,error){
+                                        alert("다시 시도해주세요.\n" + "code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                                }
+                        });
+</script>
+</body>
+</html>
+

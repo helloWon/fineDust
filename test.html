@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<title>DISPLAY</title>
+<head>
+<meta charset="utf-8">
+<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+<link href="./style.css" rel="stylesheet">
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    "2017. 12. 09. SAT "+h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+    document.getElementById('pm25').innerHTML =  "PM2.5 value : ";
+    document.getElementById('pm10').innerHTML =  "PM 10 value : ";
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+</head>
+<script src="jquery-1.11.1.min.js"></script>
+<script>
+                        $.ajax({
+                                url: 'algo_return.php?x='+'37.496539'+'&y='+'126.956869',
+                                type: 'GET',
+                                cache: false,
+                                success: function(data) {
+                                      var main_pm10value = data.x;
+                                      var main_pm25value = data.y;
+                                     // document.write(main_pm25value);
+				      document.getElementById('d25').innerHTML =  main_pm25value + "㎍/㎥";
+                                      document.getElementById('d10').innerHTML =  main_pm10value + "㎍/㎥";
+				      
+                                },
+                                error:function(request,status,error){
+                                        alert("다시 시도해주세요.\n" + "code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                                }
+                        });
+</script>
+
+<body onload="startTime()">
+<p style="margin-left: 2.5em;color:white;font-size:40px;">white</p>
+<div style = "margin-left: 5em; color:#666;font-size:30px;" id = "txt"></div>
+<p style="margin-left: 2.5em;font-size:40px;"> </p>
+<p><img src = "cloudy.gif" width=35% height=20% style = "margin-left : 10em;" align = "left">
+<div style "font-size: 20px;" id = "pm25"></div><div style "font-size:25px;" id = "d25"></div><BR><BR><BR><div style "font-size: 20px;" id = "pm10"></div><div style "font-size:25px;" id = "d10"></p>
+</body>
+</html>        
